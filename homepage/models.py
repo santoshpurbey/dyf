@@ -33,6 +33,33 @@ class Logo(models.Model):
             return ('Logo '+ str(self.pk))
             
             
+class WorkingArea(models.Model):
+    title = models.CharField(max_length=50)
+    description = models.TextField(null=True, blank=True)
+    image = models.ImageField(upload_to='Working Areas', null=True, blank=True)
+    publish = models.BooleanField(default=False, help_text='check me to show this in home page')
+    created = models.DateTimeField(auto_now_add=False, auto_now=True)
+    published = models.DateTimeField(auto_now_add=False, auto_now=True)
+    
+    def __str__(self):
+        return self.title 
+        
+        
+class RecentWork(models.Model):
+    title = models.CharField(max_length=50)
+    description = models.TextField(null=True, blank=True)
+    image = models.ImageField(upload_to='Working Areas', null=True, blank=True)
+    publish = models.BooleanField(default=False, help_text='check me to show this in home page')
+    created = models.DateTimeField(auto_now_add=False, auto_now=True)
+    published = models.DateTimeField(auto_now_add=False, auto_now=True)
+    
+    def __str__(self):
+        return self.title
+    
+    
+    
+            
+            
 class Footer(models.Model):
     org_name = models.CharField('organization Full Name', max_length=140, help_text='Write Full Name of Organization')
     address = models.CharField('Organization Full Adress', max_length=140, help_text='eg. Sanepa, Lalitpur')
