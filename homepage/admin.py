@@ -6,11 +6,10 @@ from .models import (
                     Logo, 
                     Footer, 
                     WorkingArea,
-                    RecentWork,
-                    )
+                    SocialMediaIcon,)
 admin.site.register(Logo)
 admin.site.register(Banner)
 admin.site.register(Footer)
 admin.site.register(WorkingArea)
-admin.site.register(RecentWork)
+admin.site.register(SocialMediaIcon)
 
